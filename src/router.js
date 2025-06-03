@@ -1,9 +1,12 @@
-import { createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import SignForm from "./components/SignForm.vue";
+import HelloWorld from "./components/HelloWorld.vue";
+import Task from "./components/task.vue";
 
 const routes = [
-  { path: "/", component: SignForm },
-  { path: "/about", component: SignForm },
+  { path: "/", name: "default", component: HelloWorld },
+  { path: "/sign", name: "sign", component: SignForm },
+  { path: "/task", name: "task", component: Task },
 ];
 
 const router = createRouter({

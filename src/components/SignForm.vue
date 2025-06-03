@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 const login = ref();
 const password = ref();
 const succes = ref(false);
@@ -11,6 +13,7 @@ const clickHandler = () => {
   }
   errors.value = undefined;
   succes.value = true;
+  router.push({ name: "task" });
 };
 </script>
 <template>
