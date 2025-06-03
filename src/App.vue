@@ -1,12 +1,12 @@
 <script setup>
-import SignForm from "./components/SignForm.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
   <header></header>
 
   <main>
-    <SignForm></SignForm>
+    <router-view></router-view>
   </main>
   <footer></footer>
 </template>
